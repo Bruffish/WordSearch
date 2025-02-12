@@ -7,3 +7,7 @@ edition = "2021"
 
 [dependencies]
 clap = "4.5.19"
+
+[[bin]]
+name = "wordsearch"
+path = "src/main.rs"
