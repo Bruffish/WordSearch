@@ -1,6 +1,6 @@
 use std::env;
 use std::fs;
-use std::io::{self, Error};
+use std::error::Error;
 use std::path::Path;
 use rayon::prelude::*;
 
@@ -19,6 +19,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     let search_term = &args[1];
     let current_dir = env::current_dir()?;
+    println!("Searching in: {}", current_dir.display());
     search_files(&current_dir, search_term)?;
 
     Ok(())
@@ -52,4 +53,14 @@ fn search_files(dir_path: &Path, search_term: &str) -> Result<(), Box<dyn Error>
     }
 
     Ok(())
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn it_works() {
+        assert_eq!(2 + 2, 4);
+    }
 }

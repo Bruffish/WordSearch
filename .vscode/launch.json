@@ -1,0 +1,14 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug main.rs",
+      "program": "${workspaceFolder}/target/debug/wordsearch",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "sourceLanguages": ["rust"]
+    }
+  ]
+}
